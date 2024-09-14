@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Speed Controller",
+  "version": "1.0",
+  "description": "Control the playback speed of YouTube videos.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
